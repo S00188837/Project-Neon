@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JetPack : MonoBehaviour
+public class JetPack : PlayerController
 {
     PlayerMovement movement;
 

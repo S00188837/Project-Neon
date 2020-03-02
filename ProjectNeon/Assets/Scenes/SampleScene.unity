@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e214f4cfecdc144a7a021651f55c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 5
+  sensitivity: 3
   cam: {fileID: 208232064}
 --- !u!114 &1346973121
 MonoBehaviour:
@@ -459,6 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6658fadff75eb43b7ccfee29ecd510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerState: 0
   Rigid: {fileID: 1346973124}
   MoveSpeed: 0.1
   FlyForce: 10
@@ -473,6 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e74094013bdedc458fede83ca7cc9aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerState: 0
   MaxFuel: 300
   Fuel: 0
   FuelConsumption: 2
@@ -519,7 +521,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.2, y: 1.2, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1944508444
 MeshRenderer:
