@@ -5,16 +5,20 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody Rigid;
-    public float MoveSpeed;
-    public float JumpForce;
+    JetPack jetpack;
 
+    public float MoveSpeed;
+    public float FlyForce;
+
+    private void Start()
+    {
+        jetpack = GetComponent<JetPack>();
+    }
 
     private void FixedUpdate()
     {
         Move();
-
-        if (Input.GetKey(KeyCode.Space))
-            Rigid.AddForce(transform.up * JumpForce);
+        jetpack.FixedUpdate();
     }
 
     public void Move()

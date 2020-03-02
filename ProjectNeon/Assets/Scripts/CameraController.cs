@@ -7,10 +7,8 @@ public class CameraController : MonoBehaviour
 
     float minimumX = -60f;
     float maximumX = 60f;
-    float minimumY = -360f;
-    float maximumY = 360f;
 
-    public float sensitivityX, sensitivityY;
+    public float sensitivity;
 
     public Camera cam;
 
@@ -28,15 +26,14 @@ public class CameraController : MonoBehaviour
         }
 	}
 
-
     private void FixedUpdate()
     {
-        rotationY += Input.GetAxis("Mouse X") * sensitivityY;
-        rotationX += Input.GetAxis("Mouse Y") * sensitivityX;
+        rotationY += Input.GetAxis("Mouse X") * sensitivity;
+        rotationX += Input.GetAxis("Mouse Y") * sensitivity;
 
         rotationX = Mathf.Clamp(rotationX, minimumX, maximumX);
         transform.localEulerAngles = new Vector3(0, rotationY, 0);
-        cam.transform.localEulerAngles = new Vector3(-rotationX, rotationY, 0);
+        cam.transform.localEulerAngles = new Vector3(-rotationX,0,0);
 
         
 
