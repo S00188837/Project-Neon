@@ -18,7 +18,7 @@ public class PlayerMovement : PlayerController
     private void FixedUpdate()
     {
         Move();
-        jetpack.FixedUpdate();
+        
     }
 
     public void Move()
