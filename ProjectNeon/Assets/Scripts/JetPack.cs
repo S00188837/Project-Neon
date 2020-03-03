@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class JetPack : PlayerController
 {
-    PlayerMovement movement;
+    public Rigidbody Rigid;
+
+    public float FlyForce;
 
     public float MaxFuel = 300;
     public float Fuel = 0;
@@ -15,14 +17,13 @@ public class JetPack : PlayerController
     private void Start()
     {
         Fuel = MaxFuel;
-        movement = GetComponent<PlayerMovement>();
     }
 
     public void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space) && Fuel >= FuelConsumption)
+        if (Input.GetKey(KeyCode.Space) && Fuel >= FuelConsumption && isGrounded == false)
         {
-            movement.Rigid.AddForce(transform.up * movement.FlyForce);
+            Rigid.AddForce(transform.up * FlyForce);
             Fuel -= FuelConsumption;
         }
 

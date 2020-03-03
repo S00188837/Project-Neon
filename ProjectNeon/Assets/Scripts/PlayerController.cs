@@ -4,27 +4,43 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
     public enum PlayerStates
     {
-        Idle,
-        Walking,
-        Flying,
+        OnGround,
+        InAir,
         Shooting,
         Dead
     }
 
     public PlayerStates playerState;
 
-    bool isGrounded;
+    public bool isGrounded = false;
 
     private void Start()
     {
-        playerState = PlayerStates.Idle;
+        playerState = PlayerStates.OnGround;
     }
 
-    private void FixedUpdate()
+    void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.tag == "Floor")
+        {
+            isGrounded = true;
+            playerState = PlayerStates.OnGround;
+        }
+
     }
 
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+        {
+            isGrounded = false;
+            playerState = PlayerStates.InAir;
+        }
+    }
 }
+
+
+

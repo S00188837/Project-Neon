@@ -5,20 +5,23 @@ using UnityEngine;
 public class PlayerMovement : PlayerController
 {
     public Rigidbody Rigid;
-    JetPack jetpack;
 
+    public float JumpForce;
     public float MoveSpeed;
-    public float FlyForce;
-
-    private void Start()
-    {
-        jetpack = GetComponent<JetPack>();
-    }
 
     private void FixedUpdate()
     {
+
         Move();
-        
+
+        if (isGrounded == true)
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Jump();
+            }
+        }
+
     }
 
     public void Move()
@@ -26,6 +29,11 @@ public class PlayerMovement : PlayerController
         {
             Rigid.MovePosition(transform.position + (transform.forward * Input.GetAxis("Vertical") * MoveSpeed) + (transform.right * Input.GetAxis("Horizontal") * MoveSpeed));
         }
+    }
+
+    void Jump()
+    {
+        Rigid.AddForce(transform.up * JumpForce);
     }
 
 }

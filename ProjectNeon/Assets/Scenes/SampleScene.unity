@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 509186993}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,7 +287,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2, z: 1.2}
+  m_Size: {x: 1.04, y: 1.04, z: 1.04}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &509186994
 MeshRenderer:
@@ -337,8 +337,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 509186992}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.72, y: 4.43, z: 14.68}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.72, y: 4.43, z: 14.679999}
   m_LocalScale: {x: 10, y: 10, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 734929234}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -422,12 +422,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 734929233}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1346973115
 GameObject:
@@ -518,7 +518,7 @@ Transform:
   m_Children:
   - {fileID: 208232067}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1346973120
 MonoBehaviour:
@@ -545,9 +545,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerState: 0
+  isGrounded: 0
   Rigid: {fileID: 1346973124}
+  JumpForce: 300
   MoveSpeed: 0.1
-  FlyForce: 20
 --- !u!114 &1346973122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,7 +561,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerState: 0
-  MaxFuel: 300
+  isGrounded: 0
+  Rigid: {fileID: 1346973124}
+  FlyForce: 20
+  MaxFuel: 100
   Fuel: 0
   FuelConsumption: 2
 --- !u!54 &1346973124
@@ -591,7 +595,7 @@ GameObject:
   - component: {fileID: 1944508443}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -606,7 +610,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2, z: 1.2}
+  m_Size: {x: 1.04, y: 1.04, z: 1.04}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1944508444
 MeshRenderer:
@@ -656,8 +660,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1944508442}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.04, y: 4.43, z: 14.68}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20.04, y: 4.43, z: 14.679999}
   m_LocalScale: {x: 10, y: 10, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
