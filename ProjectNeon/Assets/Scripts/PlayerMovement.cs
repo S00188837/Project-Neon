@@ -2,19 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : PlayerController
+public class PlayerMovement : MonoBehaviour
 {
+    PlayerController controller;
     public Rigidbody Rigid;
 
     public float JumpForce;
     public float MoveSpeed;
+
+    private void Start()
+    {
+        controller =  GetComponent<PlayerController>();
+    }
 
     private void FixedUpdate()
     {
 
         Move();
 
-        if (isGrounded == true)
+        if (controller.isGrounded == true)
         {
             if (Input.GetKey(KeyCode.Space))
             {

@@ -61,10 +61,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AutomaticGun.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\HealthComponent.cs" />
     <Compile Include="Assets\Scripts\JetPack.cs" />
+    <Compile Include="Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\RayCastWeapon.cs" />
+    <Compile Include="Assets\Scripts\Weapon.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/S00188837.CAMPUS/Documents/GitHub/Project-Neon/ProjectNeon/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
