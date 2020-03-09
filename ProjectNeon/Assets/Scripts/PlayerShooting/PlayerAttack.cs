@@ -8,8 +8,8 @@ public class PlayerAttack : MonoBehaviour
     int activeWeaponIndex = -1;
     Weapon activeWeapon;
 
-    public GameObject bullet;
-    public GameObject Location;
+    //public GameObject bullet;
+    //public GameObject Location;
 
     private void Start()
     {
@@ -25,13 +25,13 @@ public class PlayerAttack : MonoBehaviour
         {
             activeWeapon.Fire(transform.position);
 
-            if (activeWeaponIndex == 0)
-            {
-                GameObject g = (GameObject)Instantiate(bullet, Location.transform.position, Quaternion.identity);
+            //if (activeWeaponIndex == 0)
+            //{
+            //    GameObject g = (GameObject)Instantiate(bullet, Location.transform.position, Quaternion.identity);
 
-                float force = g.GetComponent<Bullet>().speed;
-                g.GetComponent<Rigidbody>().AddForce(g.transform.forward * force);
-            }
+            //    float force = g.GetComponent<Bullet>().speed;
+            //    g.GetComponent<Rigidbody>().AddForce(g.transform.forward * force);
+            //}
             
         }
     }
