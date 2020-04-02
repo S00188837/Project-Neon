@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -8,8 +9,12 @@ public class PlayerAttack : MonoBehaviour
     int activeWeaponIndex = -1;
     Weapon activeWeapon;
 
-    //public GameObject bullet;
-    //public GameObject Location;
+    public Transform bulletText;
+    public Transform bulletTextMAX;
+    public Transform[] Health;
+
+    public int index = 2;
+
 
     private void Start()
     {
@@ -17,23 +22,22 @@ public class PlayerAttack : MonoBehaviour
         {
             SetActiveWeapon(0);
         }
+
+        bulletText.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
+        bulletTextMAX.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
+
     }
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && activeWeapon.Magazine >= 1)
         {
             activeWeapon.Fire(transform.position);
 
-            //if (activeWeaponIndex == 0)
-            //{
-            //    GameObject g = (GameObject)Instantiate(bullet, Location.transform.position, Quaternion.identity);
-
-            //    float force = g.GetComponent<Bullet>().speed;
-            //    g.GetComponent<Rigidbody>().AddForce(g.transform.forward * force);
-            //}
-            
+            bulletText.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
         }
+
+        UsedMag();
     }
 
     private void HandleWeaponSwitching()
@@ -61,6 +65,19 @@ public class PlayerAttack : MonoBehaviour
 
                 activeWeapon = Instantiate(weapons[index], transform);
                 activeWeaponIndex = index;
+            }
+        }
+    }
+
+    void UsedMag()
+    {
+        if (activeWeapon.Magazine <= 1)
+        {
+            if (activeWeapon.MagLeft > 0)
+            {
+                Health[index].gameObject.active = false;
+                index--;
+                Debug.Log("mag gone");
             }
         }
     }

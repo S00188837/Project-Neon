@@ -49,5 +49,6 @@ MonoBehaviour:
   Magazine: 24
   AmmoUsedPerShot: 1
   IsAutomatic: 0
+  bulletText: {fileID: 0}
   Range: 100
   DamagePerHit: 30
