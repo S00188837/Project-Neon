@@ -12,4 +12,5 @@ public class RayCastWeapon : Weapon
     {
         healthComponent.ApplyDamage(DamagePerHit);
     }
+
 }
