@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8821967902725044603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5597436764386100851}
+  - component: {fileID: 4387195676710755583}
+  m_Layer: 0
+  m_Name: AutomaticGun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5597436764386100851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8821967902725044603}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0497818, y: 0.51777434, z: -0.37951803}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4387195676710755583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8821967902725044603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e56c1a1884dd24a913bdc890ac5e23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxReserves: 120
+  Reserves: 90
+  MaxMagazine: 24
+  Magazine: 24
+  MagLeft: 3
+  AmmoUsedPerShot: 1
+  IsAutomatic: 0
+  Health:
+  - {fileID: 377139662158797738, guid: 5fe82373a11def04490a000bf1e14f94, type: 3}
+  - {fileID: 9181209601849928037, guid: 78855034712da084f98ea4539a5e8904, type: 3}
+  - {fileID: 8682523484572579485, guid: 0501f8db80aa5284cb433b1b1f91a938, type: 3}
+  index: 2
+  Range: 100
+  DamagePerHit: 30

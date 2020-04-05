@@ -17,7 +17,10 @@ public class Weapon : MonoBehaviour
     public int AmmoUsedPerShot = 1;
     public bool IsAutomatic;
 
-	void Start ()
+    public Transform[] Health;
+    public int index = 2;
+
+    void Start ()
     {
         Magazine = MaxMagazine;
         Reserves = MaxReserves;
@@ -44,10 +47,21 @@ public class Weapon : MonoBehaviour
         if (Reserves >= MaxMagazine)
         {
             Magazine = MaxMagazine;
+            UsedMag();
         }
         else if (Reserves < MaxMagazine)
         {
             Magazine = MaxMagazine - Reserves;
+            UsedMag();
+        }
+    }
+
+    void UsedMag()
+    {
+        if (MagLeft > 0)
+        {
+            Health[index].gameObject.SetActive(false);
+            index--;
         }
     }
 }

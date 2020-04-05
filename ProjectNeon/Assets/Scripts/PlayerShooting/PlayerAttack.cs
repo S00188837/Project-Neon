@@ -11,9 +11,7 @@ public class PlayerAttack : MonoBehaviour
 
     public Transform bulletText;
     public Transform bulletTextMAX;
-    public Transform[] Health;
 
-    public int index = 2;
 
 
     private void Start()
@@ -37,7 +35,6 @@ public class PlayerAttack : MonoBehaviour
             bulletText.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
         }
 
-        UsedMag();
     }
 
     private void HandleWeaponSwitching()
@@ -69,16 +66,5 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    void UsedMag()
-    {
-        if (activeWeapon.Magazine <= 1)
-        {
-            if (activeWeapon.MagLeft > 0)
-            {
-                Health[index].gameObject.active = false;
-                index--;
-                Debug.Log("mag gone");
-            }
-        }
-    }
+   
 }
