@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8682523484572579484}
   m_Layer: 5
   m_Name: Ammo3
-  m_TagString: Untagged
+  m_TagString: Ammo2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

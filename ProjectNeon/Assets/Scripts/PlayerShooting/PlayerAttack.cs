@@ -30,7 +30,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && activeWeapon.Magazine >= 1)
         {
-            activeWeapon.Fire(transform.position);
+            activeWeapon.Fire(Camera.main.ScreenPointToRay(Input.mousePosition));
 
             bulletText.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
         }

@@ -17,16 +17,22 @@ public class Weapon : MonoBehaviour
     public int AmmoUsedPerShot = 1;
     public bool IsAutomatic;
 
-    public Transform[] Health;
-    public int index = 2;
+    Transform ammo1;
+    Transform ammo2;
+    Transform ammo3;
 
-    void Start ()
+    public virtual void Start ()
     {
         Magazine = MaxMagazine;
         Reserves = MaxReserves;
-	}
+
+        ammo1 = GameObject.FindGameObjectWithTag("Ammo").transform;
+        ammo2 = GameObject.FindGameObjectWithTag("Ammo1").transform;
+        ammo3 = GameObject.FindGameObjectWithTag("Ammo2").transform;
+
+    }
 	
-	public virtual void Fire(Vector3 fireFromPosition)
+	public virtual void Fire(Ray fireFromPosition)
     {
         Magazine = Magazine - AmmoUsedPerShot;
 
@@ -58,10 +64,17 @@ public class Weapon : MonoBehaviour
 
     void UsedMag()
     {
-        if (MagLeft > 0)
+        if (MagLeft == 3)
         {
-            Health[index].gameObject.SetActive(false);
-            index--;
+            ammo3.gameObject.SetActive(false);
+        }
+        else if (MagLeft == 2)
+        {
+            ammo2.gameObject.SetActive(false);
+        }
+        else if (MagLeft == 1)
+        {
+            ammo1.gameObject.SetActive(false);
         }
     }
 }

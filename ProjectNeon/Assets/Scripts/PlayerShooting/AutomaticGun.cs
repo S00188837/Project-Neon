@@ -5,11 +5,11 @@ using UnityEngine;
 public class AutomaticGun : RayCastWeapon
 {
 
-    public override void Fire(Vector3 fireFromPosition)
+    public override void Fire(Ray fireFromPosition)
     {
-        if (Physics.Raycast(fireFromPosition, transform.forward, out raycastHit, Range))
+        if (Physics.Raycast(fireFromPosition, out raycastHit, Range))
         {
-
+            Debug.DrawRay(fireFromPosition.origin, fireFromPosition.direction * Range, Color.red, 15);
             HealthComponent health = raycastHit.collider.GetComponent<HealthComponent>();
 
             if (health)
