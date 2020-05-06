@@ -17,7 +17,10 @@ public class AutomaticGun : RayCastWeapon
                 ApplyDamage(health);
             }
 
-            base.Fire(fireFromPosition);
+            if (Input.GetMouseButtonDown(0))
+            {
+                base.Fire(fireFromPosition);
+            }
         }
         
     }
