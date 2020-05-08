@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-    public HealthComponent healthBar;
+    public HealthBar healthBar;
 
     void Start()
     {
@@ -19,6 +19,11 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(20);
+        }
+
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 

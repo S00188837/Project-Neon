@@ -10,7 +10,7 @@ public class AutomaticGun : RayCastWeapon
         if (Physics.Raycast(fireFromPosition, out raycastHit, Range))
         {
             Debug.DrawRay(fireFromPosition.origin, fireFromPosition.direction * Range, Color.red, 15);
-            HealthComponent health = raycastHit.collider.GetComponent<HealthComponent>();
+            HealthBar health = raycastHit.collider.GetComponent<HealthBar>();
 
             if (health)
             {

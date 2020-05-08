@@ -6,11 +6,11 @@ public class RayCastWeapon : Weapon
 {
     protected RaycastHit raycastHit;
     public float Range;
-    public float DamagePerHit;
+    public int DamagePerHit;
 
-    protected void ApplyDamage(HealthComponent healthComponent)
+    protected void ApplyDamage(HealthBar healthBar)
     {
-        healthComponent.ApplyDamage(DamagePerHit);
+        healthBar.ApplyDamage(DamagePerHit);
     }
 
 }
