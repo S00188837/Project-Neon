@@ -50,10 +50,7 @@ MonoBehaviour:
   MagLeft: 3
   AmmoUsedPerShot: 1
   IsAutomatic: 0
-  Health:
-  - {fileID: 0}
-  - {fileID: 9181209601849928037, guid: 78855034712da084f98ea4539a5e8904, type: 3}
-  - {fileID: 8682523484572579485, guid: 0501f8db80aa5284cb433b1b1f91a938, type: 3}
-  index: 2
   Range: 100
   DamagePerHit: 30
+  bulletHole: {fileID: 6026523083676379641, guid: 3e090cafdd4c10746b78239bd7fdccbe,
+    type: 3}

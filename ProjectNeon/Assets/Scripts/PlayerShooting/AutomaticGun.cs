@@ -7,9 +7,10 @@ public class AutomaticGun : RayCastWeapon
 
     public override void Fire(Ray fireFromPosition)
     {
-        if (Physics.Raycast(fireFromPosition, out raycastHit, Range))
+        if (Physics.Raycast(fireFromPosition, out raycastHit))
         {
-            Debug.DrawRay(fireFromPosition.origin, fireFromPosition.direction * Range, Color.red, 15);
+            Debug.DrawRay(fireFromPosition.origin, fireFromPosition.direction, Color.red, 15);
+
             HealthComponent health = raycastHit.collider.GetComponent<HealthComponent>();
 
             if (health)

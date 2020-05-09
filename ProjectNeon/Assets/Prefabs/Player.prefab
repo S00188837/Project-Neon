@@ -1021,6 +1021,8 @@ MonoBehaviour:
   - {fileID: 4387195676710755583, guid: c434c54ed9f9c214ea5f722aa3186c42, type: 3}
   bulletText: {fileID: 1445991720842408458}
   bulletTextMAX: {fileID: 1445991722386397695}
+  bulletHole: {fileID: 6026523083676379641, guid: 3e090cafdd4c10746b78239bd7fdccbe,
+    type: 3}
 --- !u!114 &1445991722226126518
 MonoBehaviour:
   m_ObjectHideFlags: 0

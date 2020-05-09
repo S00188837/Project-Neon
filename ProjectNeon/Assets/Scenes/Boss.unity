@@ -2497,8 +2497,14 @@ PrefabInstance:
     - target: {fileID: 1445991721485860339, guid: 81319b5b7ee47e84db155be557858e07,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.138
+      value: 0.213
       objectReference: {fileID: 0}
+    - target: {fileID: 1445991722226126517, guid: 81319b5b7ee47e84db155be557858e07,
+        type: 3}
+      propertyPath: bulletHole
+      value: 
+      objectReference: {fileID: 6026523083676379641, guid: 3e090cafdd4c10746b78239bd7fdccbe,
+        type: 3}
     - target: {fileID: 1445991722226126539, guid: 81319b5b7ee47e84db155be557858e07,
         type: 3}
       propertyPath: m_Name
@@ -6452,6 +6458,26 @@ PrefabInstance:
     - target: {fileID: 4882615586838060, guid: 823ef3dab03095842b812af8d896e9c2, type: 3}
       propertyPath: m_LocalScale.z
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 65433574479830440, guid: 823ef3dab03095842b812af8d896e9c2,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.009438911
+      objectReference: {fileID: 0}
+    - target: {fileID: 65433574479830440, guid: 823ef3dab03095842b812af8d896e9c2,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 2.398001
+      objectReference: {fileID: 0}
+    - target: {fileID: 65433574479830440, guid: 823ef3dab03095842b812af8d896e9c2,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.050280582
+      objectReference: {fileID: 0}
+    - target: {fileID: 65433574479830440, guid: 823ef3dab03095842b812af8d896e9c2,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 1.1990001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 823ef3dab03095842b812af8d896e9c2, type: 3}
@@ -24361,6 +24387,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160826643385007097, guid: 6ab43843dcc5d1449a7cb2728a024135,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ab43843dcc5d1449a7cb2728a024135, type: 3}
