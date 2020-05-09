@@ -55,17 +55,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\HealthComponent.cs" />
-     <Compile Include="Assets\Scripts\Player\HealthBar.cs" />
-     <Compile Include="Assets\Scripts\Player\JetPack.cs" />
-     <Compile Include="Assets\Scripts\Player\Player.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\PlayerShooting\AutomaticGun.cs" />
-     <Compile Include="Assets\Scripts\PlayerShooting\PlayerAttack.cs" />
-     <Compile Include="Assets\Scripts\PlayerShooting\RayCastWeapon.cs" />
-     <Compile Include="Assets\Scripts\PlayerShooting\Weapon.cs" />
+     <Compile Include="Assets\MapMaterials\Scripts\CameraController.cs" />
+     <Compile Include="Assets\MapMaterials\Scripts\HealthComponent.cs" />
+     <Compile Include="Assets\MapMaterials\Scripts\Player\HealthBar.cs" />
+     <Compile Include="Assets\MapMaterials\Scripts\Player\JetPack.cs" />
+     <Compile Include="Assets\MapMaterials\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\MapMaterials\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\MapMaterials\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\MapMaterials\Scripts\PlayerShooting\AutomaticGun.cs" />
+     <Compile Include="Assets\MapMaterials\Scripts\PlayerShooting\PlayerAttack.cs" />
+     <Compile Include="Assets\MapMaterials\Scripts\PlayerShooting\RayCastWeapon.cs" />
+     <Compile Include="Assets\MapMaterials\Scripts\PlayerShooting\Weapon.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Emmett/Documents/GitHub/Project-Neon/ProjectNeon/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
