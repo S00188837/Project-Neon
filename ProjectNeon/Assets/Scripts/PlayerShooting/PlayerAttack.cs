@@ -12,8 +12,8 @@ public class PlayerAttack : MonoBehaviour
     public Transform bulletText;
     public Transform bulletTextMAX;
 
-    public GameObject bulletHole;
-    protected RaycastHit raycastHit;
+    
+    
 
     private void Start()
     {
@@ -27,18 +27,13 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (Input.GetMouseButton(0) && activeWeapon.Magazine >= 1)
+        if (Input.GetMouseButtonDown(0) && activeWeapon.Magazine >= 1)
         {
             activeWeapon.Fire(Camera.main.ScreenPointToRay(Input.mousePosition));
 
             bulletText.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
-
-            if (Physics.Raycast(transform.position, -Vector3.up, out raycastHit))
-            {
-                GameObject decalObject = Instantiate(bulletHole, raycastHit.point + (raycastHit.normal * 0.025f), Quaternion.FromToRotation(Vector3.forward, raycastHit.normal));
-            }
         }
 
     }

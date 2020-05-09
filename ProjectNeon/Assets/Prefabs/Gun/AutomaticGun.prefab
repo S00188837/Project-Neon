@@ -50,7 +50,7 @@ MonoBehaviour:
   MagLeft: 3
   AmmoUsedPerShot: 1
   IsAutomatic: 0
-  Range: 100
-  DamagePerHit: 30
-  bulletHole: {fileID: 6026523083676379641, guid: 3e090cafdd4c10746b78239bd7fdccbe,
+  bulletHole: {fileID: 4377066134172751053, guid: 3e090cafdd4c10746b78239bd7fdccbe,
     type: 3}
+  Range: 100
+  DamagePerHit: 25

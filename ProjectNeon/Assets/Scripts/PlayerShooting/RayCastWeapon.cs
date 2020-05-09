@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RayCastWeapon : Weapon
 {
+    public GameObject bulletHole;
     protected RaycastHit raycastHit;
     public float Range;
     public float DamagePerHit;

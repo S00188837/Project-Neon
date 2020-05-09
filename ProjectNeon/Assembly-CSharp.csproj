@@ -63,6 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Domey\ChangePhase.cs" />
+    <Compile Include="Assets\Scripts\Domey\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Domey\EnemyFollow.cs" />
     <Compile Include="Assets\Scripts\Domey\NavMeshMover.cs" />
     <Compile Include="Assets\Scripts\HealthComponent.cs" />

@@ -13,6 +13,11 @@ public class AutomaticGun : RayCastWeapon
 
             HealthComponent health = raycastHit.collider.GetComponent<HealthComponent>();
 
+            GameObject FF = Instantiate(bulletHole, raycastHit.point + (raycastHit.normal * 0.025f), Quaternion.FromToRotation(Vector3.forward, raycastHit.normal), raycastHit.collider.transform);
+
+            Destroy(FF, 2.0f);
+            
+
             if (health)
             {
                 ApplyDamage(health);
@@ -25,4 +30,5 @@ public class AutomaticGun : RayCastWeapon
         }
         
     }
+
 }
