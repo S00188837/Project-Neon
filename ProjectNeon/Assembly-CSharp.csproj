@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Domey\EnemyFollow.cs" />
+    <Compile Include="Assets\Scripts\Domey\NavMeshMover.cs" />
     <Compile Include="Assets\Scripts\HealthComponent.cs" />
     <Compile Include="Assets\Scripts\JetPack.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
