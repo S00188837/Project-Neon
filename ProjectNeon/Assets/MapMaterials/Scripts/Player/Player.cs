@@ -16,11 +16,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
-
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
