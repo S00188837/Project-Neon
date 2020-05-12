@@ -14,7 +14,6 @@ public class EnemyController : NavMeshMover
         base.Start();
     }
 
-
     void Update()
     {
         if (health.Health <= 1000)

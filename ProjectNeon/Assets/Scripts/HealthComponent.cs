@@ -15,6 +15,7 @@ public class HealthComponent : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    } 
+    }
 
+    
 }

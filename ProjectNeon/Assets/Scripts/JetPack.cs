@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JetPack : MonoBehaviour
 {
@@ -13,11 +14,15 @@ public class JetPack : MonoBehaviour
     public float Fuel = 0;
     public float FuelConsumption = 2;
 
+    public Transform textFuel;
+    public Slider jetPack;
 
 
     private void Start()
     {
+
         controller = GetComponent<PlayerController>();
+        textFuel.GetComponent<Text>().text = Fuel.ToString();
         Fuel = MaxFuel;
     }
 
@@ -33,7 +38,14 @@ public class JetPack : MonoBehaviour
         {
             Fuel += 1f;
         }
+
     }
 
-   
+    void Update()
+    {
+        textFuel.GetComponent<Text>().text = Fuel.ToString();
+
+        jetPack.value = Fuel;
+    }
+
 }
