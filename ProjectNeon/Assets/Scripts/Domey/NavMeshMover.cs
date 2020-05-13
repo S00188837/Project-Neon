@@ -9,8 +9,11 @@ public class NavMeshMover : MonoBehaviour
 
     protected NavMeshAgent agent;
 
+    
+
     public virtual void Start()
     {
+        
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -27,10 +30,12 @@ public class NavMeshMover : MonoBehaviour
     public virtual void Stop()
     {
         agent.isStopped = true;
+        
     }
 
     public virtual void Resume()
     {
+        
         agent.isStopped = false;
     }
 

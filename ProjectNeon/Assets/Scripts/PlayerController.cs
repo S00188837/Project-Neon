@@ -98,16 +98,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "AmmoBox")
-        {
-            
-
-            Destroy(other.gameObject);
-
-        }
-    }
+   
 }
 
 
