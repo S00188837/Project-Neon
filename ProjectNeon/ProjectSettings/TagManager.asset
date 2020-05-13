@@ -8,6 +8,7 @@ TagManager:
   - Ammo
   - Ammo1
   - Ammo2
+  - AmmoBox
   layers:
   - Default
   - TransparentFX

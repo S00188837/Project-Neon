@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform bulletText;
     public Transform bulletTextMAX;
 
-
+    public AudioSource ShootingAudio;
 
     private void Start()
     {
@@ -24,17 +24,18 @@ public class PlayerAttack : MonoBehaviour
         bulletText.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
         bulletTextMAX.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
 
+        ShootingAudio = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
         if (Input.GetMouseButton(0) && activeWeapon.Magazine >= 1)
         {
+            ShootingAudio.Play();
             activeWeapon.Fire(Camera.main.ScreenPointToRay(Input.mousePosition));
-
-            bulletText.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
         }
 
+        bulletText.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
     }
 
     private void HandleWeaponSwitching()
