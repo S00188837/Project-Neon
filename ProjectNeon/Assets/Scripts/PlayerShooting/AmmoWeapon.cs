@@ -15,14 +15,21 @@ public class Weapon : MonoBehaviour
     public int MagLeft = 3;
 
     public int AmmoUsedPerShot = 1;
-    public bool IsAutomatic;
+    public bool reloading;
 
     Transform ammo1;
     Transform ammo2;
     Transform ammo3;
 
+    public AudioSource reloadAudio;
+
+    public float timer = 3;
+    
+
     public virtual void Start ()
     {
+        reloadAudio = GetComponent<AudioSource>();
+
         Magazine = MaxMagazine;
         Reserves = MaxReserves;
 
@@ -31,16 +38,42 @@ public class Weapon : MonoBehaviour
         ammo3 = GameObject.FindGameObjectWithTag("Ammo2").transform;
 
     }
-	
-	public virtual void Fire(Ray fireFromPosition)
+
+    private void Update()
+    {
+        if (reloading == true)
+        {
+
+            
+
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                reloading = false;
+                timer = 3;
+
+                if (Magazine <= 0 && MagLeft > 0)
+                {
+                    Reload();
+                    MagLeft--;
+                }
+                
+            }
+            if (timer <= 2.9 && timer >= 2.5 && MagLeft >= 1)
+            {
+                reloadAudio.Play();
+            }
+        }
+
+        if (!HasAmmo())
+        {
+            reloading = true;
+        }
+    }
+
+    public virtual void Fire(Ray fireFromPosition)
     {
         Magazine = Magazine - AmmoUsedPerShot;
-
-        if (Magazine <= 0 && MagLeft > 0)
-        {
-            Reload();
-            MagLeft--;
-        }
     }
 
     public bool HasAmmo()
@@ -67,6 +100,7 @@ public class Weapon : MonoBehaviour
         if (MagLeft == 3)
         {
             ammo3.gameObject.SetActive(false);
+
         }
         else if (MagLeft == 2)
         {
@@ -77,4 +111,24 @@ public class Weapon : MonoBehaviour
             ammo1.gameObject.SetActive(false);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "AmmoBox")
+        {
+            MagLeft = 3;
+
+            ammo1.gameObject.SetActive(true);
+            ammo2.gameObject.SetActive(true);
+            ammo3.gameObject.SetActive(true);
+
+            Magazine = MaxMagazine;
+
+            Destroy(other.gameObject);
+
+        }
+    }
+
+
+
 }

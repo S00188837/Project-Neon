@@ -13,6 +13,7 @@ TagManager:
   - Health2
   - Health3
   - Health4
+  - AmmoBox
   layers:
   - Default
   - TransparentFX

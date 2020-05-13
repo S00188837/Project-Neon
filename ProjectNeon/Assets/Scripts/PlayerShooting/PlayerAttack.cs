@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -12,8 +13,10 @@ public class PlayerAttack : MonoBehaviour
     public Transform bulletText;
     public Transform bulletTextMAX;
 
-    
-    
+    public AudioSource shootAudio;
+
+    public float timer = 3;
+
 
     private void Start()
     {
@@ -21,6 +24,9 @@ public class PlayerAttack : MonoBehaviour
         {
             SetActiveWeapon(0);
         }
+
+        shootAudio = GetComponent<AudioSource>();
+        
 
         bulletText.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
         bulletTextMAX.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
@@ -31,10 +37,14 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && activeWeapon.Magazine >= 1)
         {
+                shootAudio.Play();
+
             activeWeapon.Fire(Camera.main.ScreenPointToRay(Input.mousePosition));
 
-            bulletText.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
+            
         }
+
+        bulletText.GetComponent<Text>().text = activeWeapon.Magazine.ToString();
 
     }
 

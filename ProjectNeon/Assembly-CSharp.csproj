@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Domey\AmmoBox.cs" />
     <Compile Include="Assets\Scripts\Domey\ChangePhase.cs" />
     <Compile Include="Assets\Scripts\Domey\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Domey\EnemyFollow.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\Scripts\PlayerShooting\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerShooting\RayCastWeapon.cs" />
     <None Include="Assets\AssetStoreOriginals\Industrial_Machine_Models\Read_me.txt" />
+    <None Include="Assets\AssetStoreOriginals\MentalDreamsAssets\SoldierSoundsPack\ReadMe!.txt" />
     <None Include="Assets\AssetStoreOriginals\Industrial Props\ReadMe.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Domas/Documents/GitHub/Project-Neon/ProjectNeon/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

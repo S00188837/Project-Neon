@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     HealthComponent healthComponent;
+    
+
     public Transform HealthText;
+
 
     Rigidbody rigid;
     public float force = -10;
@@ -32,6 +35,8 @@ public class PlayerController : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody>();
         healthComponent = GetComponent<HealthComponent>();
+        
+
         HealthText.GetComponent<Text>().text = healthComponent.Health.ToString();
         playerState = PlayerStates.OnGround;
 
@@ -90,6 +95,17 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;
             playerState = PlayerStates.InAir;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "AmmoBox")
+        {
+            
+
+            Destroy(other.gameObject);
+
         }
     }
 }
