@@ -47,15 +47,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxReserves: 120
   Reserves: 90
-  MaxMagazine: 24
-  Magazine: 24
+  MaxMagazine: 16
+  Magazine: 16
   MagLeft: 3
   AmmoUsedPerShot: 1
   Reloading: 0
   reloadAudio: {fileID: 0}
   Timer: 3
   Range: 100
-  DamagePerHit: 0
+  DamagePerHit: 25
 --- !u!65 &6387611624411687863
 BoxCollider:
   m_ObjectHideFlags: 0
